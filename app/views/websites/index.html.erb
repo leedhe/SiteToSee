@@ -1,0 +1,29 @@
+<h1>Websites</h1>
+
+<p><a href="/new_website">Add a New Website</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Site url</th>
+      <th>Site name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @websites.each do |website| %>
+    <tr>
+          <td><%= website.site_url %></td>
+          <td><%= website.site_name %></td>
+          <td><a href="/websites/<%= website.id %>">Show</a>
+        </td>
+      <td><a href="/websites/<%= website.id %>/edit">Edit</a></td>
+      <td><a href="/websites/<%= website.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,28 @@
+<h1>Website Collection #<%= @website_collection.id %></h1>
+
+<div>
+  <strong>Website</strong>:<br />
+  <p><%= @website_collection.website_id %></p>
+</div>
+<div>
+  <strong>Collection</strong>:<br />
+  <p><%= @website_collection.collection_id %></p>
+</div>
+
+<a href="/website_collections/<%= @website_collection.id %>/edit">Edit</a> |
+<a href="/website_collections/<%= @website_collection.id %>/destroy">Destroy</a>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Collection Name</div>
+  
+<% @website_collections.each do |website_collection| %>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Collection Name</div>
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item"><%= website_collection.website_id %></li>
+  </ul>
+<% end %>
+  </div>

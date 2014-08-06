@@ -1,0 +1,39 @@
+<div class="well well-lg">
+    <h2>Collections <span class="text-muted pull-right"><a href="/new_collection">Add a New Collection</a>&middot;<a href="/new_website">Add To The Collection</a></span></h2>
+  </div>
+
+<div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-body">
+        <p style="font-size:32px;">Owned by <%= session['username'] %></p>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Site Name</th>
+            <th>Site Link </th>
+          </tr>
+        </thead>
+        <tbody>
+            
+          <tr>
+            <td>1</td>
+            <td><a href="#"><% @collections.each do |collection| %>
+              <%= collection.site_name %>
+              <a href="/websites %>">Show</a>
+              <a href="/collections/<%= collection.id %>/edit">Edit</a>
+              <a href="/collections/<%= collection.id %>/destroy">Destroy</a>
+              <% end %></td>
+            <td><a href="#"><% @collections.each do |collection| %>
+              <%= collection.site_url %>
+              <a href="/websites %>">Show</a>
+              <a href="/collections/<%= collection.id %>/edit">Edit</a>
+              <a href="/collections/<%= collection.id %>/destroy">Destroy</a>
+              <% end %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

@@ -1,0 +1,13 @@
+<h1>User Collection #<%= @user_collection.id %></h1>
+
+<div>
+  <strong>User</strong>:<br />
+  <p><%= @user_collection.user.name %></p>
+</div>
+<div>
+  <strong>Collection</strong>:<br />
+  <p><%= @user_collection.collection_id %></p>
+</div>
+
+<a href="/user_collections/<%= @user_collection.id %>/edit">Edit</a> |
+<a href="/user_collections/<%= @user_collection.id %>/destroy">Destroy</a>

@@ -1,0 +1,35 @@
+<div class="well well-lg">
+  <h3>Users<span class="text-muted pull-right"><a href="/new_user">Add a New User</a></span></h3>
+  </div>
+
+<table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>User Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a href="#"><% @users.each do |user| %>
+              <%= user.name %>
+              <a href="/users/<%= user.id %>">Show</a>
+              <a href="/users/<%= user.id %>/edit">Edit</a>
+              <a href="/users/<%= user.id %>/destroy">Destroy</a>
+              <% end %>
+            </td>
+            <td><a href="#"><% @users.each do |user| %>
+              <%= user.email %>
+              <a href="/users/<%= user.id %>">Show</a>
+              <a href="/users/<%= user.id %>/edit">Edit</a>
+              <a href="/users/<%= user.id %>/destroy">Destroy</a>
+              <% end %>
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+

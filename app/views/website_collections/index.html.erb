@@ -1,0 +1,33 @@
+<div class="well well-lg">
+   <h3>Website Collections<span class="text-muted pull-right"><a href="/new_website_collection">Add a New Website Collection</a></span></h3>
+  </div>
+<table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Website ID</th>
+            <th>Collection ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a href="#"><% @website_collections.each do |website_collection| %>
+              <%= website_collection.collection_id %>
+              <a href="/website_collections/<%= website_collection.id %>">Show</a>
+              <a href="/website_collections/<%= website_collection.id %>/edit">Edit</a>
+              <a href="/website_collections/<%= website_collection.id %>/destroy">Destroy</a>
+              <% end %>
+            </td>
+            <td><a href="#"><% @website_collections.each do |website_collection| %>
+              <%= website_collection.website_id %>
+              <a href="/website_collections/<%= website_collection.id %>">Show</a>
+              <a href="/website_collections/<%= website_collection.id %>/edit">Edit</a>
+              <a href="/website_collections/<%= website_collection.id %>/destroy">Destroy</a>
+              <% end %>
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
