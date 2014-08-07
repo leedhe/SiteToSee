@@ -2,11 +2,11 @@
 
 <form action="/websites/<%= @website.id %>/update">
   <div>
-    <label for="site_url">site_url</label><br />
+    <label for="site_url">Website URL:</label><br />
     <input id="site_url" name="site_url" value="<%= @website.site_url  %>" type="text" />
   </div>
   <div>
-    <label for="site_name">site_name</label><br />
+    <label for="site_name">Website Name:</label><br />
     <input id="site_name" name="site_name" value="<%= @website.site_name  %>" type="text" />
   </div>
   <div>
@@ -14,4 +14,22 @@
   </div>
 </form>
 
+<div class="well well-lg">
+  <h2>Editing Website Collection #<%= @website.id %><span class="text-muted pull-right"><a href="/new_website">Add a New Website </a></span></h2>
+  </div>
 
+<div class="container">
+<form action="/website/<%= @website.id %>/update">
+  <div class="col-md-6">
+    <label for="site_url">Website URL:</label><br />
+    <input id="site_url" name="site_url" value="<%= @website.site_url  %>" type="text" style="border-radius:13px;"/>
+  </div>
+  <div class="col-md-6">
+    <label for="site_name">Collection ID:</label><br />
+    <input id="site_name" name="site_name" value="<%= @website.site_name  %>" type="text" style="border-radius:13px;"/>
+  </div>
+  <div class="col-md-6">
+    <input type="submit" style="border-radius:3px;">
+  </div>
+</form>
+</div>

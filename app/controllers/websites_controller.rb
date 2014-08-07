@@ -17,7 +17,7 @@ class WebsitesController < ApplicationController
     @website.site_name = params[:site_name]
 
     if @website.save
-      redirect_to "/websites/#{ @website.id }"
+      redirect_to "/collections"
     else
       render 'new'
     end
@@ -33,7 +33,7 @@ class WebsitesController < ApplicationController
     @website.site_name = params[:site_name]
 
     if @website.save
-      redirect_to "/websites/#{ @website.id }"
+      redirect_to "/collections"
     else
       render 'edit'
     end

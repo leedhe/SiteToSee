@@ -1,28 +1,33 @@
-<h1>Website Collection #<%= @website_collection.id %></h1>
-
-<div>
-  <strong>Website</strong>:<br />
-  <p><%= @website_collection.website_id %></p>
-</div>
-<div>
-  <strong>Collection</strong>:<br />
-  <p><%= @website_collection.collection_id %></p>
-</div>
-
-<a href="/website_collections/<%= @website_collection.id %>/edit">Edit</a> |
-<a href="/website_collections/<%= @website_collection.id %>/destroy">Destroy</a>
-
-<div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Collection Name</div>
-  
-<% @website_collections.each do |website_collection| %>
-<div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Collection Name</div>
-  <!-- List group -->
-  <ul class="list-group">
-    <li class="list-group-item"><%= website_collection.website_id %></li>
-  </ul>
-<% end %>
+<div class="well well-lg">
+    <h2>Website Collections<span class="text-muted pull-right"><a href="/new_website_collection">Add a New Website Collection</a></span></h2>
   </div>
+
+<div class="panel panel-default">
+      <!-- Default panel contents -->
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Website</th>
+            <th>Collection ID</th>
+          </tr>
+        </thead>
+        <tbody>
+            
+          <tr>
+            <td>1</td>
+            <td><a href="#"><% @website_collection.website_id%>
+              <a href="/website_collections %>">Show</a>
+              <a href="/website_collections/<%= @website_collection.id %>/edit">Edit</a>
+              <a href="/website_collections/<%= @website_collection.id %>/destroy">Destroy</a>
+             </td>
+            <td><a href="#"><% @website_collection.collection_id %>
+              <a href="/websites %>">Show</a>
+              <a href="/collections/<%= @website_collection.id %>/edit">Edit</a>
+              <a href="/collections/<%= @website_collection.id %>/destroy">Destroy</a>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

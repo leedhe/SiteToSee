@@ -1,17 +1,22 @@
-<h1>Editing Website Collection #<%= @website_collection.id %></h1>
 
+<div class="well well-lg">
+  <h2>Editing Website Collection #<%= @website_collection.id %><span class="text-muted pull-right"><a href="/new_website_collection">Add a New Website Collection</a></span></h2>
+  </div>
+
+<div class="container">
 <form action="/website_collections/<%= @website_collection.id %>/update">
-  <div>
-    <label for="website_id">website_id</label><br />
-    <input id="website_id" name="website_id" value="<%= @website_collection.website_id  %>" type="text" />
+  <div class="col-md-6">
+    <label for="site_id">Website ID:</label><br />
+    <input id="site_id" name="site_id" value="<%= @website_collection.website_id  %>" type="text" style="border-radius:13px;"/>
   </div>
-  <div>
-    <label for="collection_id">collection_id</label><br />
-    <input id="collection_id" name="collection_id" value="<%= @website_collection.collection_id  %>" type="text" />
+  <div class="col-md-6">
+    <label for="collection_id">Collection ID:</label><br />
+    <input id="collection_id" name="collection_id" value="<%= @website_collection.collection_id  %>" type="text" style="border-radius:13px;"/>
   </div>
-  <div>
-    <input type="submit">
+  <div class="col-md-6">
+    <input type="submit" style="border-radius:3px;">
   </div>
 </form>
+</div>
 
 

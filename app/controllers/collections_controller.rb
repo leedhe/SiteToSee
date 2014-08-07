@@ -16,6 +16,8 @@ class CollectionsController < ApplicationController
     @collection.site_name = params[:site_name]
     @collection.site_id = params[:site_id]
     @collection.site_url = params[:site_url]
+    @collection.site_name = params[:site_name]
+    @collection.site_url = params[:site_url]
 
     if @collection.save
       redirect_to "/collections"
@@ -33,6 +35,7 @@ class CollectionsController < ApplicationController
     @collection.site_name = params[:site_name]
     @collection.site_id = params[:site_id]
     @collection.site_url = params[:site_url]
+    
 
     if @collection.save
       redirect_to "/collections"

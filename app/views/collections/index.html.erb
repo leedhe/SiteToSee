@@ -1,14 +1,11 @@
 <div class="well well-lg">
-    <h2>Collections <span class="text-muted pull-right"><a href="/new_collection">Add a New Collection</a>&middot;<a href="/new_website">Add To The Collection</a></span></h2>
+    <h2>Collections <span class="text-muted pull-right"><a href="/new_website">Add To The Collection</a></span></h2>
   </div>
 
 <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-body">
-        <p style="font-size:32px;">Owned by <%= session['username'] %></p>
-      </div>
-
+  <div class="panel-heading">Collection Name</div>
       <!-- Table -->
+    <div class="panel-body">
       <table class="table">
         <thead>
           <tr>
@@ -18,22 +15,18 @@
           </tr>
         </thead>
         <tbody>
-            
-          <tr>
-            <td>1</td>
-            <td><a href="#"><% @collections.each do |collection| %>
-              <%= collection.site_name %>
-              <a href="/websites %>">Show</a>
-              <a href="/collections/<%= collection.id %>/edit">Edit</a>
-              <a href="/collections/<%= collection.id %>/destroy">Destroy</a>
-              <% end %></td>
-            <td><a href="#"><% @collections.each do |collection| %>
-              <%= collection.site_url %>
-              <a href="/websites %>">Show</a>
-              <a href="/collections/<%= collection.id %>/edit">Edit</a>
-              <a href="/collections/<%= collection.id %>/destroy">Destroy</a>
-              <% end %></td>
+          <% @collections.each do |collection| %>
+            <tr>
+              <td>1</td>
+              <td><%= collection.site_name %></td>
+              <td><%= collection.site_url %></td>
+              <td><a href="/collections/<%= collection.id %>">Show</a></td>
+        <td><a href="/collections/<%= collection.id %>/edit">Edit</a></td>
+        <td><a href="/collections/<%= collection.id %>/destroy">Destroy</a></td>
           </tr>
+          <% end %>
         </tbody>
       </table>
     </div>
+  </div>
+</div>

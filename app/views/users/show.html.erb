@@ -1,13 +1,31 @@
-<h1>User #<%= @user.id %></h1>
+<div class="well well-lg">
+  <h3>User #<span class="text-muted"><%= @user.id %></span></h3>
+  </div>
 
-<div>
-  <strong>Name</strong>:<br />
-  <p><%= @user.name %></p>
-</div>
-<div>
-  <strong>Email</strong>:<br />
-  <p><%= @user.email %></p>
-</div>
+<div class="panel panel-default">
+      <!-- Default panel contents -->
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>User Email</th>
+            <th>Collections</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @user.name %></td>
+            <td><%= @user.email %></td>
+            <td><%= @collections.each do |collection| %>
+              <% collection.site_name %>
+              <% end %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
 <a href="/users/<%= @user.id %>/edit">Edit</a> |
 <a href="/users/<%= @user.id %>/destroy">Destroy</a>

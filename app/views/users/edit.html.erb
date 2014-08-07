@@ -1,25 +1,28 @@
-<h1>Editing User #<%= @user.id %></h1>
-
+<div class="well well-lg">
+    <h2>Edit Account Details</h2>
+  </div>
+<div class="container">
 <form action="/users/<%= @user.id %>/update">
-  <div>
-    <label for="name">name</label><br />
-    <input id="name" name="name" value="<%= @user.name  %>" type="text" />
+  <div class="col-md-6">
+    <label for="name">Username:</label><br />
+    <input id="name" name="name" value="<%= @user.name  %>" type="text" style="border-radius:13px;"/>
   </div>
-  <div>
-    <label for="email">email</label><br />
-    <input id="email" name="email" value="<%= @user.email  %>" type="text" />
+  <div class="col-md-6">
+    <label for="email">Email:</label><br />
+    <input id="email" name="site_id" value="<%= UserCollection.find_by(user_id: @user.id).user.user_id %>" type="text" style="border-radius:13px;"/>
   </div>
-  <div>
-    <label for="password">password</label><br />
-    <input id="password" name="password" type="password" />
+  <div class="col-md-6">
+    <label for="password">Password:</label><br />
+    <input id="password" name="password" type="password" style="border-radius:13px;"/>
   </div>
-  <div>
-    <label for="password_confirmation">password_confirmation</label><br />
-    <input id="password_confirmation" name="password_confirmation" type="password" />
+   <div>
+    <label for="password_confirmation">Retype Password</label><br />
+    <input id="password_confirmation" name="password_confirmation" type="password" style="border-radius:13px;"/>
   </div>
-  <div>
-    <input type="submit">
+  <div class="col-md-6">
+    <input type="submit" style="border-radius:3px;">
   </div>
 </form>
+</div>
 
 

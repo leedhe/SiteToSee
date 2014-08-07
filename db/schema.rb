@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806192846) do
+ActiveRecord::Schema.define(version: 20140806234857) do
 
   create_table "collection_panels", force: true do |t|
     t.string   "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140806192846) do
     t.string   "site_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "c_name"
   end
 
   create_table "user_collections", force: true do |t|
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(version: 20140806192846) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.integer  "user_id"
   end
 
   create_table "website_collections", force: true do |t|

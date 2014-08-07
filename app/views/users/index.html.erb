@@ -11,25 +11,22 @@
           </tr>
         </thead>
         <tbody>
+          <% @users.each do |user| %>
           <tr>
             <td>1</td>
-            <td><a href="#"><% @users.each do |user| %>
-              <%= user.name %>
-              <a href="/users/<%= user.id %>">Show</a>
-              <a href="/users/<%= user.id %>/edit">Edit</a>
-              <a href="/users/<%= user.id %>/destroy">Destroy</a>
-              <% end %>
-            </td>
-            <td><a href="#"><% @users.each do |user| %>
-              <%= user.email %>
-              <a href="/users/<%= user.id %>">Show</a>
-              <a href="/users/<%= user.id %>/edit">Edit</a>
-              <a href="/users/<%= user.id %>/destroy">Destroy</a>
-              <% end %>
-            </td>
-            
+            <td><%= user.name %><td>
+            <td><%= user.email %><td>
+            <td><a href="/users/<%= user.id %>">Show</a></td>
+            <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
+            <td><a href="/users/<%= user.id %>/destroy">Destroy</a></td>
           </tr>
+          <% end %>
         </tbody>
       </table>
     </div>
 
+<% if session['username'] %>
+        <td><a href="/users/<%= user.id %>">Show</a></td>
+        <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
+        <td><a href="/users/<%= user.id %>/destroy">Destroy</a></td>
+      <% end %>
