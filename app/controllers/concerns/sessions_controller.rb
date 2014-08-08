@@ -3,23 +3,17 @@ class SessionsController < ApplicationController
   end
   
   def create
-    @collections = Collection.all
-    
     u = User.find_by(name: params['username'])
     if u && u.authenticate(params['password'])
-      session['user_id'] = u.id
-      if u.user_collections.count == 0
-        redirect_to '/new_collection'
-      else 
-        redirect_to '/collections'
-      end
+      session['user_id'] = u.id 
+      redirect_to '/collections', :notice => "You are signed in. Enjoy."
     else 
-      redirect_to '/sessions/new'
+      redirect_to '/sessions/new', :notice => "Wrong username and/or password. Please try again."
     end
   end
   
   def destroy
     reset_session
-    redirect_to '/users'
+    redirect_to '/sessions/new'
   end
 end
