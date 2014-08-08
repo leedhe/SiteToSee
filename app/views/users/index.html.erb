@@ -2,10 +2,10 @@
   <h3>Users<span class="text-muted pull-right"><a href="/new_user">Add a New User</a></span></h3>
   </div>
 
+<div class="panel panel-default">
 <table class="table">
         <thead>
           <tr>
-            <th>#</th>
             <th>Username</th>
             <th>User Email</th>
           </tr>
@@ -13,7 +13,6 @@
         <tbody>
           <% @users.each do |user| %>
           <tr>
-            <td>1</td>
             <td><%= user.name %><td>
             <td><%= user.email %><td>
             <td><a href="/users/<%= user.id %>">Show</a></td>
@@ -23,10 +22,4 @@
           <% end %>
         </tbody>
       </table>
-    </div>
-
-<% if session['username'] %>
-        <td><a href="/users/<%= user.id %>">Show</a></td>
-        <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
-        <td><a href="/users/<%= user.id %>/destroy">Destroy</a></td>
-      <% end %>
+</div>

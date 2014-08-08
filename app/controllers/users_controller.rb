@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_filter :need_signin, :except => [:new, :create, :index, :edit, :destroy]
+  before_filter :need_signin, :except => [:new, :create, :edit, :destroy]
   
   def index
     @users = User.all
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     @user.password_confirmation = params[:password_confirmation]
 
     if @user.save
-      redirect_to "/users/#{ @user.id }"
+      redirect_to "/users/#{ @user.id }", :notice => "User created."
     else
       render 'new'
     end
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
     else
       @user.destroy
       reset_session
-      redirect_to "/users"
+      redirect_to "/users", :notice => "User destroyed."
     end
   end
 end

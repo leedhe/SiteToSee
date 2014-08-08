@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   background-image: url('http://jsimagedesign.com/sitebuilder/images/BrushedAluminumBackground-3-943x602.jpg')
+ }

@@ -16,11 +16,10 @@ class CollectionsController < ApplicationController
     @collection.site_name = params[:site_name]
     @collection.site_id = params[:site_id]
     @collection.site_url = params[:site_url]
-    @collection.site_name = params[:site_name]
-    @collection.site_url = params[:site_url]
+    @collection.description = params[:description]
 
     if @collection.save
-      redirect_to "/collections"
+      redirect_to "/collections", :notice => "Collection entry added."
     else
       render 'new'
     end
@@ -35,16 +34,13 @@ class CollectionsController < ApplicationController
     @collection.site_name = params[:site_name]
     @collection.site_id = params[:site_id]
     @collection.site_url = params[:site_url]
-    
+    @collection.description = params[:description]
 
     if @collection.save
-      redirect_to "/collections"
+      redirect_to "/collections", :notice => "Collection entry updated."
     else
       render 'edit'
     end
-  end
-  
-  def add_collection
   end
 
   def destroy

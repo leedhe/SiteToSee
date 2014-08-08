@@ -11,17 +11,12 @@
           <tr>
             <th>Username</th>
             <th>User Email</th>
-            <th>Collections</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><%= @user.name %></td>
             <td><%= @user.email %></td>
-            <td><%= @collections.each do |collection| %>
-              <% collection.site_name %>
-              <% end %>
-            </td>
           </tr>
         </tbody>
       </table>

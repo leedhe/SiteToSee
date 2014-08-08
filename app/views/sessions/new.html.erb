@@ -1,9 +1,17 @@
-<h1>Sign in</h1>
-
-<label for="username">User:</label>
+<div class="container">
+  <h1>Sign In to SiteToSee</h1>
+  
   <form action="/create_sessions">
-    <input type="text" placeholder="Enter username" name="username" id="username">
-    <label for="password">Password:</label>
-    <input id="password" type="password" placeholder="your password here" name="password">
-    <input type="submit">
+    <div class="col-md-6">
+      <label for="username">Username:</label><br />
+      <input id="username" name="username" placeholder="Enter username" type="text" style="border-radius:13px;"/>
+    </div>
+    <div class="col-md-6">
+      <label for="password">Password:</label><br />
+      <input id="password" type="password" placeholder="your password here" name="password"style="border-radius:13px;"/>
+    </div>
+    <div class="col-md-6">
+      <input type="submit" style="border-radius:3px;">
+    </div>
   </form>
+</div>

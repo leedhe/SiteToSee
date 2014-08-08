@@ -1,28 +1,28 @@
 <div class="well well-lg">
     <h2>Edit Account Details</h2>
-  </div>
+</div>
 <div class="container">
-<form action="/users/<%= @user.id %>/update">
-  <div class="col-md-6">
-    <label for="name">Username:</label><br />
-    <input id="name" name="name" value="<%= @user.name  %>" type="text" style="border-radius:13px;"/>
-  </div>
-  <div class="col-md-6">
-    <label for="email">Email:</label><br />
-    <input id="email" name="site_id" value="<%= UserCollection.find_by(user_id: @user.id).user.user_id %>" type="text" style="border-radius:13px;"/>
-  </div>
-  <div class="col-md-6">
-    <label for="password">Password:</label><br />
-    <input id="password" name="password" type="password" style="border-radius:13px;"/>
-  </div>
-   <div>
-    <label for="password_confirmation">Retype Password</label><br />
-    <input id="password_confirmation" name="password_confirmation" type="password" style="border-radius:13px;"/>
-  </div>
-  <div class="col-md-6">
-    <input type="submit" style="border-radius:3px;">
-  </div>
-</form>
+  <form action="/users/<%= @user.id %>/update">
+    <div class="col-md-6">
+      <label for="name">Username:</label><br />
+      <input id="name" name="name" value="<%= @user.name  %>" type="text" style="border-radius:13px;"/>
+    </div>
+    <div class="col-md-6">
+      <label for="email">Email:</label><br />
+      <input id="email" name="email" value="<%= @user.email %>" type="text" style="border-radius:13px;"/>
+    </div>
+    <div class="col-md-6">
+      <label for="password">Password:</label><br />
+      <input id="password" name="password" type="password" style="border-radius:13px;"/>
+    </div>
+     <div>
+      <label for="password_confirmation">Retype Password</label><br />
+      <input id="password_confirmation" name="password_confirmation" type="password" style="border-radius:13px;"/>
+    </div>
+    <div class="col-md-6">
+      <input type="submit" style="border-radius:3px;">
+    </div>
+  </form>
 </div>
 
 

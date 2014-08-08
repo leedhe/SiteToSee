@@ -1,6 +1,6 @@
 <div class="well well-lg">
-    <h2>Collections <span class="text-muted pull-right"><a href="/new_website">Add To The Collection</a></span></h2>
-  </div>
+    <h2>Collections <span class="text-muted pull-right"><a href="/new_collection">Add To The Collection</a></span></h2>
+</div>
 
 <div class="panel panel-default">
   <div class="panel-heading">Collection Name</div>
@@ -9,17 +9,17 @@
       <table class="table">
         <thead>
           <tr>
-            <th>#</th>
             <th>Site Name</th>
             <th>Site Link </th>
+            <th>Site Description</th>
           </tr>
         </thead>
         <tbody>
           <% @collections.each do |collection| %>
             <tr>
-              <td>1</td>
               <td><%= collection.site_name %></td>
               <td><%= collection.site_url %></td>
+              <td><%= collection.description %></td>
               <td><a href="/collections/<%= collection.id %>">Show</a></td>
         <td><a href="/collections/<%= collection.id %>/edit">Edit</a></td>
         <td><a href="/collections/<%= collection.id %>/destroy">Destroy</a></td>
@@ -29,4 +29,3 @@
       </table>
     </div>
   </div>
-</div>

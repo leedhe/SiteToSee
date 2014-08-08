@@ -3,19 +3,19 @@
   </div>
 
 <div class="container">
-<form action="/user_collections/<%= @user_collection.id %>/update">
-  <div class="col-md-6">
-    <label for="user_id">User ID:</label><br />
-    <input id="user_id" name="site_id" value="<%= @user_collection.user_id %>" type="text" style="border-radius:13px;"/>
-  </div>
-  <div class="col-md-6">
-    <label for="collection_id">Collection ID:</label><br />
-    <input id="collection_id" name="collection_id" value="<%= @user_collection.collection_id %>" type="text" style="border-radius:13px;"/>
-  </div>
-  <div class="col-md-6">
-    <input type="submit" style="border-radius:3px;">
-  </div>
-</form>
+  <form action="/user_collections/<%= @user_collection.id %>/update">
+    <div class="col-md-6">
+      <label for="user_id">User ID:</label><br />
+      <input id="user_id" name="site_id" value="<%= @user_collection.user_id %>" type="text" style="border-radius:13px;"/>
+    </div>
+    <div class="col-md-6">
+      <label for="collection_id">Collection ID:</label><br />
+      <input id="collection_id" name="collection_id" value="<%= @user_collection.collection_id %>" type="text" style="border-radius:13px;"/>
+    </div>
+    <div class="col-md-6">
+      <input type="submit" style="border-radius:3px;">
+    </div>
+  </form>
 </div>
 
 

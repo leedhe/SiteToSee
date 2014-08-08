@@ -21,7 +21,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/home">SiteShare</a>
+      <a class="navbar-brand" href="/home">SiteToSee</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,8 +30,9 @@
         <li><a href="/home">HOME</a></li>
         <% if session['user_id'] %>
         <% u = User.find_by(id: session['user_id']) %>
-        <li><a href="#">SHARE A SITE</a></li>
-        <li><a href="/collections">COLLECTIONS</a></li>
+        <li><a href="/new_collection">ADD TO PUBLIC COLLECTION</a></li>
+        <li><a href="/collections">VIEW PUBLIC COLLECTION</a></li>
+        <li><a href="/users">USERS</a></li>
         <li><a href="/sessions/destroy">LOG OUT</a></li>
         <span class="pull-right"><li>Welcome, <a href="/users"><%= u.name %></a></li></span>
         <% else %>

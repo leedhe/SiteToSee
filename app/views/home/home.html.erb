@@ -1,5 +1,17 @@
 <div class="jumbotron">
-  <h1>Welcome to SiteShare.</h1>
-  <p>No more emails. No more hassle.</p>
-  <p><a class="btn btn-primary btn-lg" role="button" href="/new_user">Get started</a></p>
+  <h1>Welcome to SiteToSee.</h1>
+  <p>No more worries. No more hassle.</p>
+  <% if session['username'] %>
+    <p><a class="btn btn-primary btn-lg" role="button" href="/new_collection">Add to the collection</a></p>
+  <% else %>
+    <p><a class="btn btn-primary btn-lg" role="button" href="/new_user">Get started</a></p>
+  <% end %>
 </div>
+<div class="container">
+  <div class="page-header">
+    <h1>About SiteToSee</h1>
+  </div>
+  <div>
+    <p>Here at SiteToSee, we think that sharing websites with large crowds should be easier. You shouldn't have to scour websites on Google for a research project or spend hours on Bing trying to figure out if a site you bought from is a scam site. Just begin at SiteToSee and that work could be done in much less time.<br>Stop wasting time scouring the Internet. Start here, at SiteToSee.</p>
+  </div>
+<div>

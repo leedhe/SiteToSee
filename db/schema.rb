@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806234857) do
+ActiveRecord::Schema.define(version: 20140808025902) do
 
   create_table "collection_panels", force: true do |t|
     t.string   "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140806234857) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "c_name"
+    t.string   "description"
   end
 
   create_table "user_collections", force: true do |t|
