@@ -17,6 +17,7 @@ class CollectionsController < ApplicationController
     @collection.site_id = params[:site_id]
     @collection.site_url = params[:site_url]
     @collection.description = params[:description]
+    @collection.c_name = params[:c_name]
 
     if @collection.save
       redirect_to "/collections", :notice => "Collection entry added."
@@ -35,6 +36,7 @@ class CollectionsController < ApplicationController
     @collection.site_id = params[:site_id]
     @collection.site_url = params[:site_url]
     @collection.description = params[:description]
+    @collection.c_name = params[:c_name]
 
     if @collection.save
       redirect_to "/collections", :notice => "Collection entry updated."

@@ -12,6 +12,7 @@
             <th>Site Name</th>
             <th>Site Link </th>
             <th>Site Description</th>
+            <th>General Category</th>
           </tr>
         </thead>
         <tbody>
@@ -19,9 +20,9 @@
               <td><%= @collection.site_name %></td>
               <td><%= @collection.site_url %></td>
               <td><%= @collection.description %></td>
-              <td><a href="/collections/<%= @collection.id %>">Show</a></td>
-        <td><a href="/collections/<%= @collection.id %>/edit">Edit</a></td>
-        <td><a href="/collections/<%= @collection.id %>/destroy">Destroy</a></td>
+              <td><%= @collection.c_name %></td>
+              <td><a href="/collections/<%= @collection.id %>/edit">Edit</a></td>
+              <td><a href="/collections/<%= @collection.id %>/destroy">Destroy</a></td>
           </tr>
         </tbody>
       </table>

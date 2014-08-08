@@ -13,13 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140808025902) do
 
-  create_table "collection_panels", force: true do |t|
-    t.string   "name"
-    t.string   "links"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "collections", force: true do |t|
     t.string   "site_name"
@@ -45,20 +38,6 @@ ActiveRecord::Schema.define(version: 20140808025902) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.integer  "user_id"
-  end
-
-  create_table "website_collections", force: true do |t|
-    t.integer  "website_id"
-    t.integer  "collection_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "websites", force: true do |t|
-    t.string   "site_url"
-    t.string   "site_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end
