@@ -1,7 +1,17 @@
 == README
+1. If a student or just any kid wants their project links to be seen by the world, then they can upload it to my web app's public collection. In a scenario like this, the teacher can even project a visual of a public collection on the screen and refresh every few moments to see changes that a student has added.
+
+2. If a teacher finds a really good resource that they think would benefit other teachers, then they can add it into a public collection for the whole world to see.
+
+3. If a parent finds a malicious website, they can post it into a public collection so people make sure not to visit a website like that.
+
+SiteToSee is a public network of users for sharing website links. It's like the wikipedia of website-sharing.
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
+
+
 
 Things you may want to cover:
 
