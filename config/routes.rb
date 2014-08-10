@@ -64,7 +64,7 @@ Rails.application.routes.draw do
   get '/in_user' => 'sessions#new'
   ##
    # HOME ROUTE
-  get '/home' => 'home#home'
+  get '/home' => 'home#index'
   
   # MISCELLANEOUS ROUTES
 end
