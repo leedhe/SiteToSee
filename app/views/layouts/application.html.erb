@@ -29,17 +29,23 @@
       <ul class="nav navbar-nav">
         <li><a href="/home">HOME</a></li>
         <% if session['user_id'] %>
-        <% u = User.find_by(id: session['user_id']) %>
-        <li><a href="/new_collection">ADD TO PUBLIC COLLECTION</a></li>
-        <li><a href="/collections">VIEW PUBLIC COLLECTION</a></li>
-        <li><a href="/users">USERS</a></li>
-        <li><a href="/sessions/destroy">LOG OUT</a></li>
-        <span class="pull-right"><li>Welcome, <a href="/users"><%= u.name %></a></li></span>
+          <% u = User.find_by(id: session['user_id']) %>
+          <li><a href="/new_collection">ADD TO PUBLIC COLLECTION</a></li>
+          <li><a href="/collections">VIEW PUBLIC COLLECTION</a></li>
+          <li><a href="/users">USERS</a></li>
+          <li><a href="/sessions/destroy">LOG OUT</a></li>
+          <span class="pull-right"><li>Welcome, <a href="/users"><%= u.name %></a></li></span>
         <% else %>
-        <li><a href="/sessions/new">LOG IN</a></li>
-        <li><a href="/new_user">SIGN UP</a></li>
+          <li><a href="/sessions/new">LOG IN</a></li>
+          <li><a href="/new_user">SIGN UP</a></li>
         <% end %>
       </ul>
+          <form class="navbar-form navbar-left" role="search" action="/collections">
+            <div class="form-group">
+              <input type="text" class="form-control" name="search" placeholder="Search for a site">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
   
@@ -55,9 +61,9 @@
 
    <div class="footer">
     <hr>
-    <p class="pull-left">&copy; 2014 SiteShare</p>
-     &middot; <p class="pull-left">This site is monitored for spam and inappropriate content.</p>
-    <p class="pull-right"><a href="#">Back to Top</a></p>
+      <p class="pull-left">&copy; 2014 SiteShare</p>
+      <p class="pull-left">&middot; This site is monitored for spam and inappropriate content.</p>
+      <p class="pull-right"><a href="#">Back to Top</a></p>
  </div>
   
 </body>

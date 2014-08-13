@@ -1,7 +1,17 @@
 class CollectionsController < ApplicationController
 
   def index
-    @collections = Collection.all
+    
+    search = params['search']
+    
+    if search
+      search_category = Collection.where(c_name: search)
+      search_site = Collection.where(site_name: search)
+      search_url = Collection.where(site_url: search)
+      @collections = search_category + search_site + search_url
+    else
+      @collections = Collection.all
+    end
   end
 
   def show
